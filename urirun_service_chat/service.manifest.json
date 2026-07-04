@@ -1,0 +1,37 @@
+{
+  "id": "chat",
+  "kind": "service",
+  "name": "urirun-service-chat",
+  "label": "urirun chat/operator dashboard",
+  "defaultHost": "127.0.0.1",
+  "defaultPort": 8194,
+  "env": {
+    "host": "URIRUN_CHAT_HOST",
+    "port": "URIRUN_CHAT_PORT",
+    "db": "URIRUN_HOST_DB",
+    "token": "URIRUN_NODE_TOKEN"
+  },
+  "routes": [
+    "dashboard://host/chat/command/ask",
+    "dashboard://host/service/chat/command/restart",
+    "service://host/chat/command/restart",
+    "service://chat/command/restart",
+    "dashboard://host/artifacts/query/list",
+    "dashboard://host/services/query/live",
+    "dashboard://host/uri/command/invoke"
+  ],
+  "http": {
+    "index": "/",
+    "api": [
+      "/api/chat/ask",
+      "/api/chat/history",
+      "/api/chat/messages/delete",
+      "/api/artifacts",
+      "/api/artifacts/delete",
+      "/api/artifacts/dedupe",
+      "/api/artifacts/cleanup-orphans",
+      "/api/services/live",
+      "/api/uri/invoke"
+    ]
+  }
+}

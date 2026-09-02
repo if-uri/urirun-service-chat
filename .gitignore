@@ -257,3 +257,8 @@ __marimo__/
 # urirun generated discovery cache (embeds per-run timestamps — not source)
 .urirun/discovered-registry.json
 **/.urirun/discovered-registry.json
+
+# koru runtime artefacts (generated)
+.planfile/.koru/
+.koru/
+.planfile/sprints/*.bak-*
